@@ -1,0 +1,26 @@
+.app {
+    transition: all 0.6s;
+    &__light {
+        background-color: $Very-Light-Grayish-Blue;
+    }
+    &__dark {
+        background-color: $Very-Dark-Blue;
+    }
+
+    height: 100vh;
+    &__header {
+        &--dark {
+            background-image: url(../../images/bg-desktop-dark.jpg);
+        }
+        &--light {
+            background-image: url(../../images/bg-desktop-light.jpg);
+        }
+        height: 35vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
