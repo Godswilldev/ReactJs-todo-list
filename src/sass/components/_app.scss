@@ -35,6 +35,9 @@
             text-transform: uppercase;
             letter-spacing: 2rem;
             margin-top: -10rem;
+            @include respond(tab-port) {
+                font-size: 3.5rem;
+            }
         }
         &--dark {
             background-image: url(../../images/bg-desktop-dark.jpg);
