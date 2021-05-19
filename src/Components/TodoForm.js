@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import uuid from "uuid/v4";
-let reg = `/^[]+g, ""`;
 class TodoForm extends Component {
   state = {
     task: "",

@@ -25,7 +25,7 @@ class App extends Component {
               src={this.state.darkMode ? iconSun : iconMoon}
               alt={this.state.darkMode ? "iconSun " : "iconMoon"}
               onClick={this.handleClick}
-              style={{ marginTop: "-5rem" }}
+              style={{ marginTop: "-10rem" }}
             />
           </div>
           <div className="todolist">

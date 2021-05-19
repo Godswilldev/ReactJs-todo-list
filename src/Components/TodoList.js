@@ -58,11 +58,12 @@ class TodoList extends Component {
             />
           </div>
         ))}
-        <div>
-          <p>{this.itemsLeft()} items left</p>
+        <div className="todolist__stats">
+          <p>{this.itemsLeft()} Items left</p>
           <p onClick={this.allTodos}>All</p>
           <p onClick={this.activeTodos}>Active</p>
-          <p onClick={this.completedTodos}>completed</p>
+          <p onClick={this.completedTodos}>Completed</p>
+          <p onClick={this.completedTodos}>Clear Completed</p>
         </div>
       </div>
     );
