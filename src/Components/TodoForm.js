@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import uuid from "uuid/v4";
-
+let reg = `/^[]+g, ""`;
 class TodoForm extends Component {
   state = {
     task: "",
@@ -9,25 +9,30 @@ class TodoForm extends Component {
   handleChange = (evt) => {
     const { name, value } = evt.target;
     this.setState({
-      [name]: value,
+      [name]: value.trim(),
     });
   };
   handleSubmit = (evt) => {
     evt.preventDefault();
-    this.props.addTodo({ ...this.state, id: uuid(), completed: false });
-    this.setState({ task: "" });
+    if (this.state.task === "") {
+      return;
+    } else {
+      this.props.addTodo({ ...this.state, id: uuid(), completed: false });
+      this.setState({ task: "" });
+    }
   };
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
+      <div className="todoform">
+        <form onSubmit={this.handleSubmit} className="todoform__form">
           <input
             type="text"
             name="task"
             id="task"
-            placeholder="Create new Todo"
+            placeholder="Create a new Todo"
             value={this.state.task}
             onChange={this.handleChange}
+            className="todoform__input"
           />
         </form>
       </div>

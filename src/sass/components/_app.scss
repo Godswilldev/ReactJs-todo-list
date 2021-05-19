@@ -1,20 +1,17 @@
 .app {
     transition: all 0.6s;
+    height: 100vh;
+
     &__light {
         background-color: $Very-Light-Grayish-Blue;
+        color: $Very-Dark-Blue;
     }
     &__dark {
         background-color: $Very-Dark-Blue;
+        color: $Very-Light-Grayish-Blue;
     }
 
-    height: 100vh;
     &__header {
-        &--dark {
-            background-image: url(../../images/bg-desktop-dark.jpg);
-        }
-        &--light {
-            background-image: url(../../images/bg-desktop-light.jpg);
-        }
         height: 35vh;
         background-position: center;
         background-repeat: no-repeat;
@@ -22,5 +19,32 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0 30%;
+        @include respond(tab-port) {
+            padding: 0 15%;
+        }
+
+        &--title {
+            font-size: 5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2rem;
+            margin-top: -5rem;
+        }
+        &--dark {
+            background-image: url(../../images/bg-desktop-dark.jpg);
+        }
+        &--light {
+            background-image: url(../../images/bg-desktop-light.jpg);
+        }
+    }
+}
+
+.todolist {
+    width: 40%;
+    margin: 0 auto;
+    // background-color: yellow;
+    @include respond(tab-port) {
+        width: 70%;
     }
 }
