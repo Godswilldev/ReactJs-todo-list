@@ -17,7 +17,7 @@ export const Input = styled.input`
     width: 60%;
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: 450px) {
     width: 80%;
   }
 
